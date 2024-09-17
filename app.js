@@ -43,7 +43,7 @@ app.use('/api',OrderController)
 mongoose.connect(mongoUrl,
     { useNewUrlParser: true, useUnifiedTopology: true }
 ).then(client => {
-    app.listen(port, hostname, () => {
+    app.listen(port, '0.0.0.0', hostname, () => {
         console.log(`Server running at http://${hostname}:${port}/`)
     });
 }).catch(err => {
